@@ -1,0 +1,11 @@
+body {
+	background-image: "img/space-background.png"
+}
+
+.correct {
+	color: green;
+}
+
+.incorrect {
+	color: red;
+}
