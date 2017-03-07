@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<!-- Include jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Bootstrap Things (following 3 links) -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
@@ -19,29 +20,54 @@
 </head>
 
 <body id="body">
+	<!-- TOP SECTION - header & instructions -->
 	<header>
-		<h2>So You Think Want To Be A Programmer?</h2>
-		<p>Challenge yourself to the questions below and see if you got the fundmental knowledge needed to dive into the world of programming and software development. Test if you've got what it takes to join the ranks in the engineering space. May the force be with you...</p>
+		<h1>So You Think Want To Be A Programmer?</h1>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-8 col-md-offset-2">
+				<h3>Challenge yourself to the questions below and see if you got the fundmental knowledge needed to dive into the world of programming and software development. Test if you've got what it takes to join the ranks in the engineering space. <b><i>May the force be with you...</b></i></h3>
+		    </div>
+		  </div>
 	</header>
 	
-	<section>
+	<!-- MIDDLE/MAIN SECTION - 7 questions and 7 inputs to enter answers  -->
+	<section id="questions">
 		<h4 id="question0">question 1</h4>
-		<input type="text" name="answer0" id="guess0">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer0" id="guess0"> <br>
 		<h4 id="question1">question 2</h4>
-		<input type="text" name="answer1" id="guess1">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer1" id="guess1"> <br>
 		<h4 id="question2">question 3</h4>
-		<input type="text" name="answer2" id="guess2">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer2" id="guess2"> <br>
 		<h4 id="question3">question 4</h4>
-		<input type="text" name="answer3" id="guess3">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer3" id="guess3"> <br>
 		<h4 id="question4">question 5</h4>
-		<input type="text" name="answer4" id="guess4">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer4" id="guess4"> <br>
 		<h4 id="question5">question 6</h4>
-		<input type="text" name="answer5" id="guess5">
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer5" id="guess5"> <br>
 		<h4 id="question6">question 7</h4>
-		<input type="text" name="answer6" id="guess6">
-		<button id="btn" onclick="checkAnswers()">Test Your Knowledge</button>
+		<input class="col-sm-4 col-sm-offset-4" type="text" name="answer6" id="guess6"> <br>
+		<br> <br>
+		<!-- Button to submit answers and fire function to verify answers, update the results below, and change colors of the questions based on correctness -->
+		<div class="container">
+			<button class="btn-success btn-lg btn-block" onclick="checkAnswers()"><span>Test Your Knowledge</span></button> <br> <br>
+		</div>
 	</section>
 	
+	<!-- BOTTOM SECTION - displaying # of correct & incorrect answers -->
+	<section id="results">
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-3 col-md-offset-2" >
+				<h4>Correct: </h4><h3 class="turngreen" id="numCor">0</h3> 
+			</div>
+			<div class="col-md-3 col-md-offset-2">
+				<h4>Incorrect: </h4><h3 class="turnred" id="numInc">0</h3> 
+		    </div>
+		  </div>
+	</section>
+	
+	<!-- FOOTER - link to my personal portfolio -->
 	<footer>
 		Designed by <a href="www.jessfjin.com">JessFJin Studios</a>
 	</footer>
